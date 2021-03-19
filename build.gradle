@@ -1,0 +1,25 @@
+plugins {
+    id 'scala'
+    id 'application'
+}
+
+mainClassName = 'Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.scala-lang:scala-library:2.13.5'
+    implementation 'org.scalatest:scalatest_2.13:3.2.3'
+    implementation 'org.scalatest:scalatest-funsuite_2.13:3.2.3'
+    implementation 'org.junit.platform:junit-platform-engine:1.7.1'
+    implementation "org.junit.platform:junit-platform-launcher:1.7.1"
+    implementation 'co.helmethair:scalatest-junit-runner:0.1.8'
+}
+
+test {
+    useJUnitPlatform {
+        includeEngines 'scalatest'
+    }
+}
