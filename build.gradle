@@ -11,6 +11,11 @@ repositories {
 
 dependencies {
     implementation 'org.scala-lang:scala-library:2.13.5'
+
+    implementation 'org.apache.ant:ant:1.10.1'
+    implementation 'org.apache.commons:commons-compress:1.20'
+    implementation 'org.jsoup:jsoup:1.13.1'
+
     implementation 'org.scalatest:scalatest_2.13:3.2.3'
     implementation 'org.scalatest:scalatest-funsuite_2.13:3.2.3'
     implementation 'org.junit.platform:junit-platform-engine:1.7.1'
