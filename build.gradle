@@ -3,7 +3,7 @@ plugins {
     id 'application'
 }
 
-mainClassName = 'Main'
+mainClassName = 'ResourceBuilder'
 
 repositories {
     mavenCentral()
@@ -15,6 +15,11 @@ dependencies {
     implementation 'org.apache.ant:ant:1.10.1'
     implementation 'org.apache.commons:commons-compress:1.20'
     implementation 'org.jsoup:jsoup:1.13.1'
+
+    compile group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: '2.2.11'
+    compile group: 'org.apache.sis.core', name: 'sis-utility', version: '1.0'
+    compile group: 'org.apache.sis.non-free', name: 'sis-embedded-data', version: '1.0'
+    compile group: 'com.lihaoyi', name: 'requests_2.13', version: '0.6.2'
 
     implementation 'org.scalatest:scalatest_2.13:3.2.3'
     implementation 'org.scalatest:scalatest-funsuite_2.13:3.2.3'

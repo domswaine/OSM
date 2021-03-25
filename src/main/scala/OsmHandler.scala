@@ -22,7 +22,7 @@ class OsmHandler extends DefaultHandler {
       case "way" =>
         way = Way(attributes.getValue("id").toLong)
       case "nd" =>
-        way.addNode(attributes.getValue("ref").toDouble)
+        way.addNode(attributes.getValue("ref").toLong)
       case "tag" => attributes.getValue("k") match {
         case "highway" => way.setIsHighway()
         case "name" => way.setName(attributes.getValue("name"))
